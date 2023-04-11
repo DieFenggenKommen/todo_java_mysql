@@ -40,10 +40,10 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8080, 5005],
+	"forwardPorts": [8080, 5005]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "./mvnw clean package -DskipTests"
+	//"postCreateCommand": "./mvnw clean package -DskipTests"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
