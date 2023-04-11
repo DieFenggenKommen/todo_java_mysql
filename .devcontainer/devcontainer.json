@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "Java",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+
+
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
+	},
+
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+	// Dann geben wir an in welchem von den von uns definieren Containern sich die App
+	// befindet, die wir weiter entwickeln wollen. Dabei verwenden wir den Namen, den wir
+  // im yaml File definiert haben
+	"service": "app",
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	// Hier würden wir die Extensions definieren, die wir in VS Code beim Bearbeiten dieser App
+  // zu unserer Verfügung haben wollen.
+	// "features": {},
+	// Ganz am Schluss setzen wir den User auf Root um in der Entwicklungsumgebung keine Probleme
+  // mit File Berechtigungen zu haben. 
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"Pleiades.java-extension-pack-jdk"
+			]
+		}
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
