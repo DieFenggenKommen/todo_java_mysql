@@ -33,8 +33,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"vscjava.vscode-java-pack",
-				"Pleiades.java-extension-pack-jdk"
+				"vscjava.vscode-java-pack"
 			]
 		}
 	},
