@@ -3,9 +3,8 @@ USER root
 WORKDIR /app
 COPY . .
 
-
-
-#RUN ./mvnw clean package -DskipTests
+RUN chmod +x ./mvnw
+RUN ./mvnw clean package -DskipTests
 
 
 
