@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/java:0-11
-USER root
+# USER root
 WORKDIR /app
 COPY . .
 
