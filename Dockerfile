@@ -1,6 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/java:0-11
-WORKDIR /workspaces/todo_java_mysql
+WORKDIR /app
 COPY . .
+
+RUN ./mvnw clean package -DskipTests
 
 
 
