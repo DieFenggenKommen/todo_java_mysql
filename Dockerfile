@@ -5,7 +5,7 @@ COPY . .
 
 
 
-RUN ./mvnw clean package -DskipTests
+#RUN ./mvnw clean package -DskipTests
 
 
 
